@@ -1,0 +1,30 @@
+6*4
+$de7280c2-c827-4771-af85-a278f8b7dfd6éÁ±éÄ¸üûBø
+$de7280c2-c827-4771-af85-a278f8b7dfd6êÁ±éôóĞÂ½No matching step definition found for one or more steps.
+using System;
+using TechTalk.SpecFlow;
+
+namespace MyNamespace
+{
+    [Binding]
+    public class StepDefinitions
+    {
+        [Given(@"I have provided my name")]
+        public void GivenIHaveProvidedMyName()
+        {
+            ScenarioContext.Current.Pending();
+        }
+        
+        [When(@"I send the request")]
+        public void WhenISendTheRequest()
+        {
+            ScenarioContext.Current.Pending();
+        }
+        
+        [Then(@"the result should be Hello Name")]
+        public void ThenTheResultShouldBeHelloName()
+        {
+            ScenarioContext.Current.Pending();
+        }
+    }
+}

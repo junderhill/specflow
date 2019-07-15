@@ -1,0 +1,15 @@
+/mnt/d/Code/personal/specflow/tests/bin/Debug/netcoreapp2.2/xunit.runner.visualstudio.dotnetcore.testadapter.dll
+/mnt/d/Code/personal/specflow/tests/bin/Debug/netcoreapp2.2/xunit.runner.reporters.netcoreapp10.dll
+/mnt/d/Code/personal/specflow/tests/bin/Debug/netcoreapp2.2/xunit.runner.utility.netcoreapp10.dll
+/mnt/d/Code/personal/specflow/tests/bin/Debug/netcoreapp2.2/TechTalk.SpecFlow.xUnit.SpecFlowPlugin.dll
+/mnt/d/Code/personal/specflow/tests/bin/Debug/netcoreapp2.2/tests.deps.json
+/mnt/d/Code/personal/specflow/tests/bin/Debug/netcoreapp2.2/tests.runtimeconfig.json
+/mnt/d/Code/personal/specflow/tests/bin/Debug/netcoreapp2.2/tests.runtimeconfig.dev.json
+/mnt/d/Code/personal/specflow/tests/bin/Debug/netcoreapp2.2/tests.dll
+/mnt/d/Code/personal/specflow/tests/bin/Debug/netcoreapp2.2/tests.pdb
+/mnt/d/Code/personal/specflow/tests/obj/Debug/netcoreapp2.2/tests.csprojAssemblyReference.cache
+/mnt/d/Code/personal/specflow/tests/obj/Debug/netcoreapp2.2/tests.csproj.CoreCompileInputs.cache
+/mnt/d/Code/personal/specflow/tests/obj/Debug/netcoreapp2.2/tests.AssemblyInfoInputs.cache
+/mnt/d/Code/personal/specflow/tests/obj/Debug/netcoreapp2.2/tests.AssemblyInfo.cs
+/mnt/d/Code/personal/specflow/tests/obj/Debug/netcoreapp2.2/tests.dll
+/mnt/d/Code/personal/specflow/tests/obj/Debug/netcoreapp2.2/tests.pdb
