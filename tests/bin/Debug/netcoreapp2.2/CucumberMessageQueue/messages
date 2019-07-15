@@ -28,3 +28,27 @@ namespace MyNamespace
         }
     }
 }
+5*3
+$21b20a14-769c-4be9-b3c8-90f156eff68d»È±éüÊµ¯B¬
+$21b20a14-769c-4be9-b3c8-90f156eff68d»È±é¸ÀëRöñNo matching step definition found for one or more steps.
+using System;
+using TechTalk.SpecFlow;
+
+namespace MyNamespace
+{
+    [Binding]
+    public class StepDefinitions
+    {
+        [Then(@"the result should be Hello Name")]
+        public void ThenTheResultShouldBeHelloName()
+        {
+            ScenarioContext.Current.Pending();
+        }
+    }
+}
+6*4
+$4b5c0605-f55c-488b-95ba-c3465ebc049dòÈ±é«×º:B8
+$4b5c0605-f55c-488b-95ba-c3465ebc049dòÈ±éì‘ÄÊ6*4
+$525aa7cd-5682-47b2-be06-0c4ab8af306cŸÉ±é¸ÄÇ¹ŸBœ
+$525aa7cd-5682-47b2-be06-0c4ab8af306cŸÉ±éğÍ¸ÓfbOne or more step definitions are not implemented yet.
+  HelloNameSteps.GivenIHaveProvidedMyName()

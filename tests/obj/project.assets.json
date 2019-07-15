@@ -6579,11 +6579,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "d:\\Code\\personal\\specflow\\tests\\tests.csproj",
+      "projectUniqueName": "D:\\Code\\personal\\specflow\\tests\\tests.csproj",
       "projectName": "tests",
-      "projectPath": "d:\\Code\\personal\\specflow\\tests\\tests.csproj",
+      "projectPath": "D:\\Code\\personal\\specflow\\tests\\tests.csproj",
       "packagesPath": "C:\\Users\\JasonU\\.nuget\\packages\\",
-      "outputPath": "d:\\Code\\personal\\specflow\\tests\\obj\\",
+      "outputPath": "D:\\Code\\personal\\specflow\\tests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\ProgramData\\Xamarin\\NuGet\\",
@@ -6665,7 +6665,7 @@
       "code": "NU1608",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Detected package version outside of dependency constraint: SpecFlow.xUnit 3.0.225 requires SpecFlow (= 3.0.225) but version SpecFlow 3.1.2-beta was resolved.",
+      "message": "Detected package version outside of dependency constraint: SpecFlow.Tools.MsBuild.Generation 3.0.225 requires SpecFlow (= 3.0.225) but version SpecFlow 3.1.2-beta was resolved.",
       "libraryId": "SpecFlow",
       "targetGraphs": [
         ".NETCoreApp,Version=v2.2"
@@ -6675,7 +6675,7 @@
       "code": "NU1608",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Detected package version outside of dependency constraint: SpecFlow.Tools.MsBuild.Generation 3.0.225 requires SpecFlow (= 3.0.225) but version SpecFlow 3.1.2-beta was resolved.",
+      "message": "Detected package version outside of dependency constraint: SpecFlow.xUnit 3.0.225 requires SpecFlow (= 3.0.225) but version SpecFlow 3.1.2-beta was resolved.",
       "libraryId": "SpecFlow",
       "targetGraphs": [
         ".NETCoreApp,Version=v2.2"

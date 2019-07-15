@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "d:\\Code\\personal\\specflow\\tests\\tests.csproj": {}
+    "D:\\Code\\personal\\specflow\\tests\\tests.csproj": {}
   },
   "projects": {
-    "d:\\Code\\personal\\specflow\\tests\\tests.csproj": {
+    "D:\\Code\\personal\\specflow\\tests\\tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\Code\\personal\\specflow\\tests\\tests.csproj",
+        "projectUniqueName": "D:\\Code\\personal\\specflow\\tests\\tests.csproj",
         "projectName": "tests",
-        "projectPath": "d:\\Code\\personal\\specflow\\tests\\tests.csproj",
+        "projectPath": "D:\\Code\\personal\\specflow\\tests\\tests.csproj",
         "packagesPath": "C:\\Users\\JasonU\\.nuget\\packages\\",
-        "outputPath": "d:\\Code\\personal\\specflow\\tests\\obj\\",
+        "outputPath": "D:\\Code\\personal\\specflow\\tests\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\ProgramData\\Xamarin\\NuGet\\",
