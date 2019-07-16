@@ -17,17 +17,17 @@ namespace tests.Features
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.0.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public partial class HelloNameFeature : Xunit.IClassFixture<HelloNameFeature.FixtureData>, System.IDisposable
+    public partial class CalculatorFeature : Xunit.IClassFixture<CalculatorFeature.FixtureData>, System.IDisposable
     {
         
         private static TechTalk.SpecFlow.ITestRunner testRunner;
         
         private Xunit.Abstractions.ITestOutputHelper _testOutputHelper;
         
-#line 1 "HelloName.feature"
+#line 1 "Calculator.feature"
 #line hidden
         
-        public HelloNameFeature(HelloNameFeature.FixtureData fixtureData, Xunit.Abstractions.ITestOutputHelper testOutputHelper)
+        public CalculatorFeature(CalculatorFeature.FixtureData fixtureData, Xunit.Abstractions.ITestOutputHelper testOutputHelper)
         {
             this._testOutputHelper = testOutputHelper;
             this.TestInitialize();
@@ -36,7 +36,7 @@ namespace tests.Features
         public static void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-GB"), "Hello name", "    In order to be greeted\n    As a normal user\n    I want to be greeted by name", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-GB"), "Calculator", "    Is able to perform various simple calculations.", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -76,43 +76,23 @@ namespace tests.Features
             this.ScenarioTearDown();
         }
         
-        [Xunit.FactAttribute(DisplayName="Greets me when I\'m anonymous")]
-        [Xunit.TraitAttribute("FeatureTitle", "Hello name")]
-        [Xunit.TraitAttribute("Description", "Greets me when I\'m anonymous")]
-        public virtual void GreetsMeWhenImAnonymous()
+        [Xunit.TheoryAttribute(DisplayName="Addition")]
+        [Xunit.TraitAttribute("FeatureTitle", "Calculator")]
+        [Xunit.TraitAttribute("Description", "Addition")]
+        [Xunit.InlineDataAttribute("1", "1", "2", new string[0])]
+        [Xunit.InlineDataAttribute("10", "20", "30", new string[0])]
+        public virtual void Addition(string first, string second, string sum, string[] exampleTags)
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Greets me when I\'m anonymous", null, ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Addition", null, exampleTags);
+#line 5
+    this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 6
+        testRunner.Given(string.Format("Values {0} and {1}", first, second), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 7
-this.ScenarioInitialize(scenarioInfo);
-            this.ScenarioStart();
+        testRunner.When("Users calls the Add endpoint", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 8
-    testRunner.Given("I have not provided my name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 9
-    testRunner.When("I send the request", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 10
-    testRunner.Then("the result should just be Hello", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            this.ScenarioCleanup();
-        }
-        
-        [Xunit.TheoryAttribute(DisplayName="Greets me by name")]
-        [Xunit.TraitAttribute("FeatureTitle", "Hello name")]
-        [Xunit.TraitAttribute("Description", "Greets me by name")]
-        [Xunit.InlineDataAttribute("Jason", "\"Hello Jason\"", new string[0])]
-        [Xunit.InlineDataAttribute("Dave", "\"Hello Dave\"", new string[0])]
-        [Xunit.InlineDataAttribute("Allan", "\"Hello Allan\"", new string[0])]
-        public virtual void GreetsMeByName(string name, string greeting, string[] exampleTags)
-        {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Greets me by name", null, exampleTags);
-#line 12
-this.ScenarioInitialize(scenarioInfo);
-            this.ScenarioStart();
-#line 13
-    testRunner.Given(string.Format("I have provided a name {0}", name), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 14
-    testRunner.When("I send the request", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 15
-    testRunner.Then(string.Format("the result should be {0}", greeting), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+        testRunner.Then(string.Format("I should received a response of {0}", sum), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -124,12 +104,12 @@ this.ScenarioInitialize(scenarioInfo);
             
             public FixtureData()
             {
-                HelloNameFeature.FeatureSetup();
+                CalculatorFeature.FeatureSetup();
             }
             
             void System.IDisposable.Dispose()
             {
-                HelloNameFeature.FeatureTearDown();
+                CalculatorFeature.FeatureTearDown();
             }
         }
     }
