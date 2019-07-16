@@ -10,7 +10,12 @@ namespace api.Controllers
         [Route("")]
         public IActionResult Index(string name = "")
         {
-            return new JsonResult("hello");
+            var greeting = "hello";
+            if (!string.IsNullOrWhiteSpace(name))
+            {
+                greeting += $" {name}";
+            }
+            return new JsonResult(greeting);
         }
     }
 }

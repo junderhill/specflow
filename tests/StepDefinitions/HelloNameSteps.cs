@@ -23,10 +23,14 @@ namespace tests.StepDefinitions
         public void GivenIHaveProvidedMyName(){
             queryString = "?name=jason";
         } 
+        [Given(@"I have not provided my name")]
+        public void GivenIHaveNotProvidedMyName(){
+            queryString = string.Empty;
+        } 
 
         [When(@"I send the request")]
         public async Task WhenISendTheRequest(){
-            result = await client.GetAsync($"api/hello");
+            result = await client.GetAsync($"api/hello{queryString}");
         }
 
         [Then(@"the result should be Hello Name")]
@@ -34,7 +38,15 @@ namespace tests.StepDefinitions
         {
             result.EnsureSuccessStatusCode();
             var resultString = await result.Content.ReadAsStringAsync();
-            resultString.Should().Match("hello jason");
+            resultString.Should().Match("\"hello jason\"");
+        }
+
+        [Then(@"the result should be Hello")]
+        public async Task ThenTheResultShouldBeHello()
+        {
+            result.EnsureSuccessStatusCode();
+            var resultString = await result.Content.ReadAsStringAsync();
+            resultString.Should().Match("\"hello\"");
         }
     }
 }
