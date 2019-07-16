@@ -19,9 +19,9 @@ namespace tests.StepDefinitions
             client = factory.CreateClient();
         }
 
-        [Given(@"I have provided my name")]
-        public void GivenIHaveProvidedMyName(){
-            queryString = "?name=jason";
+        [Given(@"I have provided a name (.*)")]
+        public void GivenIHaveProvidedMyName(string name){
+            queryString = $"?name={name}";
         } 
         [Given(@"I have not provided my name")]
         public void GivenIHaveNotProvidedMyName(){
@@ -33,20 +33,20 @@ namespace tests.StepDefinitions
             result = await client.GetAsync($"api/hello{queryString}");
         }
 
-        [Then(@"the result should be Hello Name")]
-        public async Task ThenTheResultShouldBeHelloName()
+        [Then(@"the result should be (.*)")]
+        public async Task ThenTheResultShouldBeHelloName(string expectedGreeting)
         {
             result.EnsureSuccessStatusCode();
             var resultString = await result.Content.ReadAsStringAsync();
-            resultString.Should().Match("\"hello jason\"");
+            resultString.Should().Match(expectedGreeting);
         }
 
-        [Then(@"the result should be Hello")]
+        [Then(@"the result should just be Hello")]
         public async Task ThenTheResultShouldBeHello()
         {
             result.EnsureSuccessStatusCode();
             var resultString = await result.Content.ReadAsStringAsync();
-            resultString.Should().Match("\"hello\"");
+            resultString.Should().Match("\"Hello\"");
         }
     }
 }

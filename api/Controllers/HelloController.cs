@@ -10,7 +10,7 @@ namespace api.Controllers
         [Route("")]
         public IActionResult Index(string name = "")
         {
-            var greeting = "hello";
+            var greeting = "Hello";
             if (!string.IsNullOrWhiteSpace(name))
             {
                 greeting += $" {name}";

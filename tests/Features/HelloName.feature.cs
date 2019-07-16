@@ -77,40 +77,43 @@ namespace tests.Features
             this.ScenarioTearDown();
         }
         
-        [Xunit.FactAttribute(DisplayName="Greets me by name")]
-        [Xunit.TraitAttribute("FeatureTitle", "Hello name")]
-        [Xunit.TraitAttribute("Description", "Greets me by name")]
-        public virtual void GreetsMeByName()
-        {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Greets me by name", null, ((string[])(null)));
-#line 7
-this.ScenarioInitialize(scenarioInfo);
-            this.ScenarioStart();
-#line 8
-    testRunner.Given("I have provided my name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 9
-    testRunner.When("I send the request", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 10
-    testRunner.Then("the result should be Hello Name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            this.ScenarioCleanup();
-        }
-        
         [Xunit.FactAttribute(DisplayName="Greets me when I\'m anonymous")]
         [Xunit.TraitAttribute("FeatureTitle", "Hello name")]
         [Xunit.TraitAttribute("Description", "Greets me when I\'m anonymous")]
         public virtual void GreetsMeWhenImAnonymous()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Greets me when I\'m anonymous", null, ((string[])(null)));
+#line 7
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 8
+    testRunner.Given("I have not provided my name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 9
+    testRunner.When("I send the request", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 10
+    testRunner.Then("the result should just be Hello", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.TheoryAttribute(DisplayName="Greets me by name")]
+        [Xunit.TraitAttribute("FeatureTitle", "Hello name")]
+        [Xunit.TraitAttribute("Description", "Greets me by name")]
+        [Xunit.InlineDataAttribute("Jason", "\"Hello Jason\"", new string[0])]
+        [Xunit.InlineDataAttribute("Dave", "\"Hello Dave\"", new string[0])]
+        [Xunit.InlineDataAttribute("Allan", "\"Hello Allan\"", new string[0])]
+        public virtual void GreetsMeByName(string name, string greeting, string[] exampleTags)
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Greets me by name", null, exampleTags);
 #line 12
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 13
-    testRunner.Given("I have not provided my name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+    testRunner.Given(string.Format("I have provided a name {0}", name), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 14
     testRunner.When("I send the request", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 15
-    testRunner.Then("the result should be Hello", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+    testRunner.Then(string.Format("the result should be {0}", greeting), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
